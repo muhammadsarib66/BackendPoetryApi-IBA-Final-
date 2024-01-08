@@ -1,9 +1,9 @@
-const express = require('express');
-const cors = require('cors');
-const ErrorHandler = require('./middlewares/ErrorHandler')
 
+const express = require("express");
 const app = express();
+const cors = require("cors");
 
+app.use(express.json());
 
 app.use(cors({
     origin : process.env.CORS_ORIGIN,
@@ -12,7 +12,7 @@ app.use(cors({
 
 
 
-// const poetryRouter = require('./routes/poertryRoutes')
-// app.use('/api/v1', poetryRouter)
-// app.use(ErrorHandler);
+
+
+
 module.exports = app

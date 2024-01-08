@@ -1,6 +1,7 @@
 const Poetry = require("../models/PoetryModels");
 
 exports.createPoetry = async (req, res) => {
+  console.log(req.body)
   await Poetry.create(req.body);
   res.send("poetry created successfully");
 };

@@ -11,5 +11,7 @@ const PoetrySchema = new mongoose.Schema({
     required: [true, "data name  must be defined"],
     // default: "add some Data",
   },
+},{
+  timestamps: true,
 });
 module.exports = mongoose.model("Poetry", PoetrySchema);
